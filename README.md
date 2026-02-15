@@ -1,4 +1,4 @@
-# TFM-BigData-DataScience-VIU-SHM-Clasification-Sonkyo-Benchmark
+# TFM-BigData-DataScience-VIU-SHM-Classification-Sonkyo-Benchmark
 Trabajo de fin de Máster de Big Data y Data Science de la VIU de Enrique González Morales. El trabajo consiste en el desarrollo de modelos de clasificación de daños a partir de un acelerómetro de los resultados expermientales del Sonkyo Benchmark
 
 El primer código en ejecutar el a8_channel_reader.ipynb que lee los archivos lvm, para cada caso y temperatura genera un archivo _a8.npy que contiene la información del acelerómetro 8. Una fila para cada segundo de la grabación, y una columna para cada una de las muestras en el segundo (1666). Se ha usado un criterio de calidad sobre el sensor de fuerza para asegurarse de que el vibrador está funcionando.
