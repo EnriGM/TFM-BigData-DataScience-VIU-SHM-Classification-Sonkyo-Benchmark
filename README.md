@@ -18,11 +18,14 @@ Como el modelo MLP obtiene buenos resultados, se ha probado a entrenar un nuevo 
  -MLP: tiempo + frecuencia 50%
 
 Se han entrenado también en los códigos directamente con los datos temporales en ambos ámbitos, para preparar los datos se utiliza el código join_data.ipynb. Los modelos son entrenados en ltsm_freq.ipynb, ltsm_time.ipynb, Conv1d_freq.ipynb, Conv1d_time.ipynb:
-  - LTSM: tiempo 24% frecuencia 97.8%
-  - CNN1D: tiempo 90.9% frecuencia 98,65%
+  - LTSM: tiempo 24.55% frecuencia 96.6%
+  - CNN1D: tiempo 91.7% frecuencia 97.74%
 
 Finalmente se entrenan modelos a partir de espectrogramas generados por CWT de estas mismas muestras de 1 segundo. Para generar las imágenes se utiliza el código generate_cwt_images.ipynb. Los modelos se entrenan en los códigos, Conv_2d.ipynb, Conv_2d_transfer.ipynb, Conv_2d_transfer_fine_tuning.ipynb. Los resultados de precisión son los siguientes:
-  - CNN2d: 93% 
-  - CNN2d transfer learning EfficientNetV2B0: 79% 
+  - CNN2d: 92.02%
+  - CNN2d transfer learning ResNet50V2: 66.9% 
+  - CNN2d transfer learning EfficientNetV2B0: 79.48% 
   - CNN2d transfer learning EfficientNetV2B0 fine tuning: 85% 
-  
+
+A parte de entrenar a partir de imágenes, se decide crear modelos que se entrenan directamente con matrices. Para generar las matrices se usa generate_cwt_matrices.ipynb. Para entrenar el modelo se usa Conv_2d_matrix.ipynb
+  - CNN2d matrices: 96.06%
